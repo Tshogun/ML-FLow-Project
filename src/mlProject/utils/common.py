@@ -11,7 +11,7 @@ import json
 import joblib
 from ensure import ensure_annotations
 from box import ConfigBox
-from pathlib import pathlib
+from pathlib import Path
 from typing import Any
 
 @ensure_annotations
@@ -68,7 +68,7 @@ def save_json(path: Path, data: dict):
 @ensure_annotations
 def load_json(path: Path) -> ConfigBox:
     with open(path) as f:
-        content json.load(f)
+        content = json.load(f)
         logger.info(f"json file loaded successfully from: {path}")
         return ConfigBox(content)
     
