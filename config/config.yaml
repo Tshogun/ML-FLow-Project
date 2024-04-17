@@ -5,3 +5,9 @@ data_ingestion:
   source_URL: https://github.com/Tshogun/ML-FLow-Project/raw/main/archive%20(4).zip
   local_data_file: artifacts/data_ingestion/data.zip
   unzip_dir: artifacts/data_ingestion
+
+
+data_validation:
+  root_dir: artifacts/data_validation
+  unzip_data_dir: artifacts/data_ingestion/winequalityN.csv
+  STATUS_FILE: artifacts/data_validation/status.txt
